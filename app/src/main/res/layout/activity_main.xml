@@ -5,54 +5,162 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <LinearLayout
+        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal"
+        android:orientation="vertical"
         >
-        <com
-        <RelativeLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-
-            >
+    <LinearLayout
+        android:id="@+id/ligne1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
         <Button
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:style="@style/buttonTheme"
+            android:id="@+id/un"
+            android:text="1"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:style="@style/buttonTheme"
+            android:id="@+id/deux"
+            android:text="2"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:style="@style/buttonTheme"
+            android:id="@+id/trois"
+            android:text="3"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:style="@style/buttonTheme"
+            android:id="@+id/plus"
             android:text="+"
-            android:textSize="20sp"
-            android:layout_margin="0dp"
-            android:padding="0dp"
-            android:layout_alignParentLeft="true"
             />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:textSize="20sp"
-
-            />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="/"
-                android:textSize="20sp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:text="*"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
 
 
     </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ligne2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/quatre"
+                android:text="4"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/cinq"
+                android:text="5"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/six"
+                android:text="6"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/moins"
+                android:text="-"
+                />
 
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ligne3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/sept"
+                android:text="7"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/huit"
+                android:text="8"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/neuf"
+                android:text="9"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/div"
+                android:text="/"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ligne4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/zero"
+                android:text="0"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/point"
+                android:text="."
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/ans"
+                android:text="ans"
+                />
+            <Button
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:style="@style/buttonTheme"
+                android:id="@+id/mul"
+                android:text="*"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
 
 </RelativeLayout>
