@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         contactButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /* on lance la nouvelle activite */
                 Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
                 startActivity(contactActivity);
             }
