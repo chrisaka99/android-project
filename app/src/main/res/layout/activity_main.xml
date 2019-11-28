@@ -294,7 +294,7 @@
                 android:background="@color/fondSec"
                 android:text="ans"
                 android:textSize="20sp"
-                android:onClick="saisirCalcul"/>
+                android:onClick="ans"/>
 
             <Button
                 android:id="@+id/mul"

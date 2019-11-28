@@ -56,5 +56,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void ans(View v){
+        ecranCalcul.getText().append(and);
+        calcul();
+    }
+
 
 }
