@@ -23,7 +23,7 @@
             android:orientation="vertical"
             android:layout_weight="1">
             <EditText
-                android:id="@+id/ecranResultat"
+                android:id="@+id/ecranCalcul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@color/fondPri"
@@ -32,9 +32,9 @@
                 android:gravity="right"
                 android:layout_weight="1"
                 android:focusable="false"
-                android:textSize="90sp" />
+                android:textSize="40sp" />
             <EditText
-                android:id="@+id/ecranCalcul"
+                android:id="@+id/ecranResultat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableBottom="@color/fondPri"
@@ -42,8 +42,8 @@
                 android:focusable="true"
                 android:gravity="right"
                 android:textSize="30sp"
+                android:textColor="@android:color/darker_gray"
                 android:fontFamily="sans-serif-black"
-
 
                 />
         </LinearLayout>

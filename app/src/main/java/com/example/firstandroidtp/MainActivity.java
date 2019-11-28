@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText ecranResultat = null;
     private EditText ecranCalcul = null;
     private Button un = null;
+    private String and = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void saisirCalcul(View v){
         ecranCalcul.getText().append(((Button) v).getText());
+        calcul();
     }
 
     public void cleanAll(View v){
@@ -40,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
         int t = ecranCalcul.getText().length();
         if ( t > 0) {
             ecranCalcul.getText().delete(t-1, t);
+            calcul();
+        }
+    }
+
+    public void calcul() {
+        try {
+            Compile calculateur = new Compile();
+            ecranResultat.setText("" + calculateur.analyseur(ecranCalcul.getText().toString()));
+            and = (calculateur.analyseur(ecranCalcul.getText().toString())!=null) ? "" + calculateur.analyseur(ecranCalcul.getText().toString()) : (and==null)? "":and;
+        } catch (Exception ex) {
+            ecranResultat.setText("");
         }
     }
 
