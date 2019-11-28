@@ -17,32 +17,41 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:background="@android:color/white"
         >
         <Button
+                android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:style="@style/buttonTheme"
+           android:background="@android:color/white"
+            android:layout_weight="1"
             android:id="@+id/un"
             android:text="1"
             />
         <Button
+            android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:style="@style/buttonTheme"
+           android:background="@android:color/white"
+            android:layout_weight="1"
             android:id="@+id/deux"
             android:text="2"
             />
         <Button
+                android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:style="@style/buttonTheme"
+            android:background="@android:color/white"
+            android:layout_weight="1"
             android:id="@+id/trois"
             android:text="3"
             />
         <Button
+                android:textSize="20sp"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:style="@style/buttonTheme"
+            android:background="@android:color/white"
+            android:layout_weight="1"
             android:id="@+id/plus"
             android:text="+"
             />
@@ -58,28 +67,32 @@
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/quatre"
                 android:text="4"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/cinq"
                 android:text="5"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/six"
                 android:text="6"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/moins"
                 android:text="-"
                 />
@@ -95,28 +108,32 @@
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/sept"
                 android:text="7"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/huit"
                 android:text="8"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/neuf"
                 android:text="9"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/div"
                 android:text="/"
                 />
@@ -133,28 +150,32 @@
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/zero"
                 android:text="0"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/point"
                 android:text="."
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/ans"
                 android:text="ans"
                 />
             <Button
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:style="@style/buttonTheme"
+                android:background="@android:color/white"
+                android:layout_weight="1"
                 android:id="@+id/mul"
                 android:text="*"
                 />
