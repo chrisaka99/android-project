@@ -4,11 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home"
+    android:background="@android:color/white"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@android:color/white"
-    >
+    tools:context=".Home">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
     <ImageView
         android:id="@+id/logoHome"
         android:layout_width="wrap_content"
@@ -16,15 +24,31 @@
         android:src="@mipmap/ic_launcher"
 
         />
+
     <TextView
         android:id="@+id/textHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
         android:layout_marginTop="10dp"
-        android:textSize="30sp"
         android:fontFamily="sans-serif-light"
+        android:text="@string/app_name"
+        android:textSize="30sp"
 
+        />
+    </LinearLayout>
+
+    <Button
+        android:background="@drawable/border"
+        android:textColor="@android:color/white"
+        android:padding="8dp"
+        android:fontFamily="sans-serif-light"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Commencer"
+        android:textAllCaps="false"
+        android:onClick="gotoMenu"
         />
 
 </LinearLayout>

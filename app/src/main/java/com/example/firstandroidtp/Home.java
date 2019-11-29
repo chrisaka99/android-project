@@ -4,9 +4,12 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.ObjectAnimator;
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.transition.Explode;
+import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,10 +29,16 @@ public class Home extends AppCompatActivity {
         animation.setDuration(700);
         animation.start();
 
-        //textHome = (TextView) findViewById(R.id.textHome);
-        //ObjectAnimator anim = ObjectAnimator.ofFloat(textHome,"scaleX",2);
-        //anim.start();
+        ObjectAnimator anima = ObjectAnimator.ofInt(logoHome, "rotate", -60);
+        anima.setDuration(700);
+        anima.start();
 
+
+    }
+
+    public void gotoMenu(View view){
+        Intent intent = new Intent(getApplicationContext(), Calculatrice.class);
+        startActivity(intent);
 
     }
 }
