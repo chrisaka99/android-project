@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context=".Calculatrice">
+    tools:context=".Calculatrice"
+    >
 
 
     <LinearLayout
@@ -24,14 +25,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Calulatrice"
+                android:text=""
                 android:paddingLeft="20sp"
                 android:textSize="25sp"
                 android:textColor="@android:color/darker_gray"
                 android:gravity="center_vertical"
                 android:layout_weight="1"
-
                 />
+
             <ImageButton
                 android:id="@+id/buttonRecent"
                 android:layout_width="wrap_content"
@@ -102,45 +103,32 @@
 
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/parGauche"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="("
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/parDroite"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text=")"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/del"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="del"
-                android:textSize="20sp"
                 android:onClick="del"/>
 
             <Button
                 android:id="@+id/C"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
                 android:layout_weight="1"
                 android:background="@android:color/holo_red_dark"
                 android:textColor="@android:color/white"
                 android:text="C"
-                android:textSize="20sp"
                 android:onClick="cleanAll"/>
 
 
@@ -154,43 +142,27 @@
             android:orientation="horizontal">
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/un"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="1"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/deux"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="2"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/trois"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="3"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
                 android:id="@+id/plus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondPri"
+                style="@style/buttonOperation"
                 android:text="+"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
 
@@ -203,45 +175,29 @@
             android:orientation="horizontal">
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/quatre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="4"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/cinq"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="5"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/six"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="6"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"
 
                 />
 
             <Button
+                style="@style/buttonOperation"
                 android:id="@+id/moins"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondPri"
                 android:text="-"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
 
@@ -254,43 +210,27 @@
             android:orientation="horizontal">
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/sept"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="7"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/huit"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="8"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/neuf"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="9"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonOperation"
                 android:id="@+id/div"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondPri"
                 android:text="/"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
 
@@ -303,43 +243,27 @@
             android:orientation="horizontal">
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/zero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="0"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/point"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="."
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
             <Button
+                style="@style/buttonDefault"
                 android:id="@+id/ans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondSec"
                 android:text="ans"
-                android:textSize="20sp"
                 android:onClick="ans"/>
 
             <Button
                 android:id="@+id/mul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/fondPri"
+                style="@style/buttonOperation"
                 android:text="*"
-                android:textSize="20sp"
                 android:onClick="saisirCalcul"/>
 
 
