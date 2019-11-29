@@ -1,17 +1,18 @@
 package com.example.firstandroidtp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Calculatrice extends AppCompatActivity {
 
-    private EditText ecranResultat = null;
+    private TextView ecranResultat = null;
     private EditText ecranCalcul = null;
-    private Button un = null;
     private String and = null;
 
     @Override
@@ -20,8 +21,7 @@ public class Calculatrice extends AppCompatActivity {
         setContentView(R.layout.activity_calculatrice);
 
 
-        un = (Button) findViewById(R.id.un);
-        ecranResultat = (EditText) findViewById(R.id.ecranResultat);
+        ecranResultat = (TextView) findViewById(R.id.ecranResultat);
         ecranCalcul = (EditText) findViewById(R.id.ecranCalcul);
 
 
@@ -35,7 +35,7 @@ public class Calculatrice extends AppCompatActivity {
 
     public void cleanAll(View v){
         ecranCalcul.getText().clear();
-        ecranResultat.getText().clear();
+        ecranResultat.setText("");
     }
 
     public  void del(View v) {

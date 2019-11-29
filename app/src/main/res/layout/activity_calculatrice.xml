@@ -31,19 +31,18 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="right"
                 android:layout_weight="1"
-                android:focusable="false"
+                android:focusable="true"
                 android:textSize="40sp" />
-            <EditText
+            <TextView
                 android:id="@+id/ecranResultat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableBottom="@color/fondPri"
-                android:editable="false"
-                android:focusable="true"
+
                 android:gravity="right"
                 android:textSize="30sp"
                 android:textColor="@android:color/darker_gray"
                 android:fontFamily="sans-serif-black"
+
 
                 />
         </LinearLayout>

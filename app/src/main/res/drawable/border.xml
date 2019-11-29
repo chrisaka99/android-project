@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/aapt"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:shape="rectangle"
+    tools:ignore="NamespaceTypo">
+
+    <stroke
+        android:width="4dp"
+        android:height="10dp"
+        android:color="@color/colorPrimary"
+        />
+
+    <size android:height="8dp" android:width="10dp" />
+</shape>
+
