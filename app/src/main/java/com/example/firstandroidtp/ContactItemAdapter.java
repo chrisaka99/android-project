@@ -4,9 +4,12 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ContactItemAdapter extends BaseAdapter {
@@ -44,14 +47,17 @@ public class ContactItemAdapter extends BaseAdapter {
         String nom_item = item.getNom();
         int num_item = item.getNumero();
 
-        //Set nom contact
+        //Recuperer la vue de nom et lui set les noms
         TextView nameItem = convertView.findViewById(R.id.nom_contact);
         nameItem.setText(nom_item);
 
-        //Set num Contact
+        //Recuperer la vue de num et lui set les nums
         TextView numItem = convertView.findViewById(R.id.num_contact);
         numItem.setText(String.valueOf(num_item));
 
         return convertView;
     }
+
+
+
 }
