@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /* on lance la nouvelle activite */
-                Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
-                startActivity(contactActivity);
+                Intent contactList = new Intent(getApplicationContext(), ContactList.class);
+                startActivity(contactList);
             }
         });
     }
