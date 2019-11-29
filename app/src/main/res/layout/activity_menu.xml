@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Menu"
+            android:padding="10sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="@string/details"
+            android:padding="20sp"
+            />
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        >
+        <Button
+            style="@style/buttonMenu"
+            android:background="@drawable/rect1"
+            android:text="Calculatrice"
+            android:drawableTop="@android:drawable/ic_media_next" />
+        <Button
+            style="@style/buttonMenu"
+            android:background="@drawable/rect2"
+            android:text="Calculatrice"
+            android:drawableTop="@android:drawable/ic_media_next" />
+        <Button
+            style="@style/buttonMenu"
+            android:background="@drawable/rect3"
+            android:text="Calculatrice"
+            android:drawableTop="@android:drawable/ic_media_next" />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

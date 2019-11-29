@@ -13,6 +13,7 @@
         <item name="android:background">@color/fondSec</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
@@ -21,6 +22,18 @@
         <item name="android:background">@color/fondPri</item>
         <item name="android:layout_weight">1</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="buttonMenu">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">15sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>

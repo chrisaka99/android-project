@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Calcorep App</string>
+    <string name="details">
+        Calcorep est une application de calculatrice combinée à une application de gestion de contact.
+        Cette application est le resultat de deux nuits de recherche du groupe
+    </string>
 </resources>
