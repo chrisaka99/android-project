@@ -17,6 +17,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ContactActivity extends AppCompatActivity {
 
@@ -40,9 +41,10 @@ public class ContactActivity extends AppCompatActivity {
             public void onClick(View v) {
                 ContactBDD.open();
                 contact Contact=new contact(nom.getText().toString(),3003030);
-                textView.append(Contact.toString());
-                ContactBDD.insertContact(Contact);
-                contact contactFromBD=ContactBDD.getContactWithNom();
+                Contact.toString();
+
+                final long l = ContactBDD.insertContact(Contact);
+                List<contact> contactFromBD=ContactBDD.getContactWithNom();
                 String name=contactFromBD.toString();
                 textView.append(name);
             }

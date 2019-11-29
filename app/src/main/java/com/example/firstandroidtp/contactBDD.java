@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class contactBDD {
     private static final int VERSION_BDD = 1;
     private static final String NOM_BDD = "db";
@@ -23,7 +26,6 @@ public class contactBDD {
         maBaseSQLite = new database(context, NOM_BDD, null, VERSION_BDD);
     }
     public void open(){
-//on ouvre la BDD en écriture
         bdd = maBaseSQLite.getWritableDatabase();
     }
     public void close(){
@@ -49,20 +51,25 @@ public class contactBDD {
 //Suppression d'un livre de la BDD grâce à l'ID
         return bdd.delete(TABLE_CONTACT, COL_ID + " = " +id, null);
     }
-    public contact getContactWithNom(){
+    public List<contact> getContactWithNom(){
+        List<contact> Contacts =new ArrayList<>();
         Cursor c = bdd.query(TABLE_CONTACT, new String[] {COL_ID, COL_NOM, COL_NUMERO},null,null,null,null,null);
-
-        return cursorToContact(c);
+        c.moveToFirst();
+        while(!c.isAfterLast()){
+            contact Contact=cursorToContact1(c);
+            Contacts.add(Contact);
+            c.moveToNext();
+        }
+        c.close();
+        return Contacts;
     }
-private contact cursorToContact(Cursor c){
+private contact cursorToContact1(Cursor c){
             if (c.getCount() == 0)
                 return null;
-            c.moveToFirst();
             contact Contact = new contact();
             Contact.setId(c.getInt(NUM_COL_ID));
             Contact.setNom(c.getString(NUM_COL_NOM));
             Contact.setNumero(c.getInt(NUM_COL_NUMERO));
-            c.close();
             return Contact;
         }
 }
