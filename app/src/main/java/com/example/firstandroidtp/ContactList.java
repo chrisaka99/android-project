@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,15 +21,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ContactList extends AppCompatActivity {
+    DatabaseHelper mydb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
 
+        mydb = new DatabaseHelper(this);
+
         final List<ContactItem> contactItemList = new ArrayList<>();
-        contactItemList.add(new ContactItem("Chris", 77372660));
-        contactItemList.add(new ContactItem("Edy", 77441122));
+        Cursor res = mydb.getAllData();
+        if (res.getCount() == 0){
+            return;
+        }
+
+        StringBuffer buffer = new StringBuffer();
+        while (res.moveToNext()){
+            contactItemList.add(new ContactItem(res.getString(1), res.getString(2)));
+        }
 
         final ListView contactView = findViewById(R.id.listView1);
         contactView.setAdapter(new ContactItemAdapter(ContactList.this, contactItemList));
@@ -75,4 +86,5 @@ public class ContactList extends AppCompatActivity {
         });
 
     }
+
 }

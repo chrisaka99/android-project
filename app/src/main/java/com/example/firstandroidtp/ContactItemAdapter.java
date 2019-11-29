@@ -45,7 +45,7 @@ public class ContactItemAdapter extends BaseAdapter {
         //recuperer des infos d'un contact
         ContactItem item = (ContactItem) getItem(position);
         String nom_item = item.getNom();
-        int num_item = item.getNumero();
+        String num_item = item.getNumero();
 
         //Recuperer la vue de nom et lui set les noms
         TextView nameItem = convertView.findViewById(R.id.nom_contact);
