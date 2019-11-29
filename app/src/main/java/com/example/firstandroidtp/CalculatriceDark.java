@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Calculatrice extends AppCompatActivity {
+public class CalculatriceDark extends AppCompatActivity {
 
     private TextView ecranResultat = null;
     private EditText ecranCalcul = null;
@@ -19,7 +19,7 @@ public class Calculatrice extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculatrice);
+        setContentView(R.layout.activity_calculatrice_dark);
 
 
         ecranResultat = (TextView) findViewById(R.id.ecranResultat);
@@ -57,8 +57,8 @@ public class Calculatrice extends AppCompatActivity {
         }
     }
 
-    public void themeDark(View view){
-        Intent intent = new Intent(getApplicationContext(),CalculatriceDark.class);
+    public void themeLight(View view){
+        Intent intent = new Intent(getApplicationContext(),Calculatrice.class);
         startActivity(intent);
     }
 
