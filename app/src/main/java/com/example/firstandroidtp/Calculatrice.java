@@ -58,7 +58,7 @@ public class Calculatrice extends AppCompatActivity {
     }
 
     public void themeDark(View view){
-        Intent intent = new Intent(getApplicationContext(),CalculatriceDark.class);
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
         startActivity(intent);
     }
 

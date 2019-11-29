@@ -10,7 +10,6 @@
         android:supportsRtl="true"
 
         android:theme="@style/AppTheme">
-        <activity android:name=".CalculatriceDark"></activity>
         <activity android:name=".Calculatrice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

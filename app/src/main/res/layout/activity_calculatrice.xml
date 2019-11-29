@@ -9,56 +9,20 @@
     tools:context=".Calculatrice"
     >
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:orientation="vertical"
         android:layout_weight="1">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text=""
-                android:paddingLeft="20sp"
-                android:textSize="25sp"
-                android:textColor="@android:color/darker_gray"
-                android:gravity="center_vertical"
-                android:layout_weight="1"
-                />
-
-            <ImageButton
-                android:id="@+id/buttonRecent"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@android:drawable/alert_dark_frame"
-                android:background="@android:color/white"
-                android:tooltipText="Theme Dark"
-                android:onClick="themeDark"
-
-                />
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@android:drawable/ic_menu_recent_history"
-                android:background="@android:color/white"
-                android:tooltipText="Historique"
-
-                />
-
-        </LinearLayout>
         <LinearLayout
             android:id="@+id/ecrans"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:orientation="vertical"
+            android:padding="20dp"
             android:layout_weight="1">
             <EditText
                 android:id="@+id/ecranCalcul"
@@ -71,18 +35,35 @@
                 android:layout_weight="1"
                 android:focusable="true"
                 android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/buttonRecent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    android:background="@android:color/white"
+                    android:tooltipText="Historique"
+
+                    />
             <TextView
                 android:id="@+id/ecranResultat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:layout_weight="1"
                 android:gravity="right"
                 android:textSize="30sp"
                 android:textColor="@android:color/darker_gray"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="sans-serif-light"
 
 
                 />
+
+            </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
