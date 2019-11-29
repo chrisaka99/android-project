@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -23,37 +24,29 @@ public class ContactActivity extends AppCompatActivity {
     private EditText nom;
     private EditText numero;
     private TextView textView;
+    private contactBDD ContactBDD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
-
+        ContactBDD=new contactBDD(this);
         validerButton = (Button) findViewById(R.id.save);
         nom = (EditText) findViewById(R.id.nom);
         numero = (EditText) findViewById(R.id.numero);
         textView=(TextView) findViewById(R.id.resutas);
+
         validerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                save();
-                load();
+                ContactBDD.open();
+                contact Contact=new contact(nom.getText().toString(),3003030);
+                textView.append(Contact.toString());
+                ContactBDD.insertContact(Contact);
+                contact contactFromBD=ContactBDD.getContactWithNom();
+                String name=contactFromBD.toString();
+                textView.append(name);
             }
         });
-    load();
     }
-    private void save() {
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preference", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("Info","Nom : "+nom.getText().toString()+"\nNumero :"+numero.getText().toString());
-        editor.apply();
 
-    }
-    private void load(){
-        SharedPreferences sharedPreferences=getSharedPreferences("shared preference",MODE_PRIVATE);
-        String res1=sharedPreferences.getString("Info","");
-        ArrayList<String> resultas=new ArrayList<>();
-        resultas.add(res1);
-        textView.append(resultas.toString());
-
-    }
 }
