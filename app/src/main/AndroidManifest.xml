@@ -18,6 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ContactList" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".ContactActivity" android:parentActivityName=".ContactList"/>
         <activity android:name=".Calculatrice" />
         <activity android:name=".MainActivity" />
     </application>

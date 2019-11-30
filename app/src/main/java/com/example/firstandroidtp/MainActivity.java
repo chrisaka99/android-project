@@ -2,7 +2,9 @@ package com.example.firstandroidtp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,10 +16,22 @@ public class MainActivity extends AppCompatActivity {
     private Button un = null;
     private String and = null;
 
+=======
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity {
+
+    private Button contactButton;
+>>>>>>> origin/contact
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
 
         un = (Button) findViewById(R.id.un);
@@ -54,6 +68,17 @@ public class MainActivity extends AppCompatActivity {
         } catch (Exception ex) {
             ecranResultat.setText("");
         }
+=======
+        contactButton = (Button) findViewById(R.id.contactButton);
+        contactButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* on lance la nouvelle activite */
+                Intent contactlist = new Intent(getApplicationContext(), ContactList.class);
+                startActivity(contactlist);
+            }
+        });
+>>>>>>> origin/contact
     }
 
     public void ans(View v){
