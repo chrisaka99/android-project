@@ -19,10 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="Menu"
+            android:text="À propos"
             android:fontFamily="sans-serif-light"
             android:padding="10sp"
             />
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/options"
@@ -33,32 +34,33 @@
         android:layout_weight="1"
         android:gravity="center"
         >
-        <Button
-            style="@style/buttonMenu"
-            android:background="@drawable/rect4"
-            android:text="Contact"
-            android:onClick="gotoContact"
+        <ImageView
+            android:id="@+id/logoHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_weight="1"
+
             />
-        <Button
-            style="@style/buttonMenu"
-            android:background="@drawable/rect4"
-            android:text="Chronometre"
-            android:onClick="gotoChrono"
-            />
-        <Button
-            style="@style/buttonMenu"
-            android:background="@drawable/rect4"
-            android:text="Calculatrice"
-            android:onClick="gotoCalculatrice"
-            />
-        <Button
-            style="@style/buttonMenu"
-            android:background="@drawable/rect4"
-            android:text="À propos"
-            android:onClick="gotoApropos"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@string/details"
+            android:fontFamily="sans-serif-light"
+            android:padding="10sp"
+            android:layout_weight="1"
             />
 
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Copyright - 2019"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:padding="10sp"
+            />
 
     </LinearLayout>
 
