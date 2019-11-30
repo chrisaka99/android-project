@@ -33,6 +33,11 @@ public class ContactItemAdapter extends BaseAdapter {
         return contactItemList.get(position);
     }
 
+
+    public void setItem(int position) {
+        contactItemList.get(position);
+    }
+
     @Override
     public long getItemId(int position) {
         return 0;
@@ -46,6 +51,7 @@ public class ContactItemAdapter extends BaseAdapter {
         ContactItem item = (ContactItem) getItem(position);
         String nom_item = item.getNom();
         String num_item = item.getNumero();
+        int id_item = item.getId();
 
         //Recuperer la vue de nom et lui set les noms
         TextView nameItem = convertView.findViewById(R.id.nom_contact);

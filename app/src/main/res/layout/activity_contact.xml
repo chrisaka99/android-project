@@ -5,8 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContactActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -47,11 +54,6 @@
         android:layout_marginTop="@dimen/defaultMargin"
         android:text="Valider"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:id="@+id/resutas"/>
 
 
 </LinearLayout>

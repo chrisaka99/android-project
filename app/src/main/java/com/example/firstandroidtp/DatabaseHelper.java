@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE "+ TB_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT NOT NULL,  numero TEXT NOT NULL)");
+        db.execSQL("CREATE TABLE "+ TB_NAME + "(id INTEGER PRIMARY KEY AUTOINCREMENT, nom TEXT NOT NULL,  numero TEXT NOT NULL)");
     }
 
     @Override
@@ -50,5 +50,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("SELECT * FROM "+ TB_NAME, null);
         return res;
+    }
+
+    public Integer delete(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TB_NAME, COL_ID +" = ?", new String[] {String.valueOf(id)});
+    }
+
+    public boolean update(String id, String nom, String num){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_ID, id);
+        contentValues.put(COL_NOM, nom);
+        contentValues.put(COL_NUM, num);
+        db.update(TB_NAME, contentValues, "id = ?", new String[] {id});
+        return true;
     }
 }

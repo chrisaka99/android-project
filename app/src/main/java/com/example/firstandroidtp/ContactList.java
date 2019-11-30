@@ -38,7 +38,7 @@ public class ContactList extends AppCompatActivity {
 
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
-            contactItemList.add(new ContactItem(res.getString(1), res.getString(2)));
+            contactItemList.add(new ContactItem(res.getInt(0),res.getString(1), res.getString(2)));
         }
 
         final ListView contactView = findViewById(R.id.listView1);
@@ -49,14 +49,18 @@ public class ContactList extends AppCompatActivity {
         contactView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "Vous avez cliqué sur cet element", Toast.LENGTH_LONG).show();
+                ContactItem elt = (ContactItem) contactView.getItemAtPosition(position);
+                Intent intent = new Intent(getBaseContext(), ContactActivity.class);
+                intent.putExtra("CONTACT_INFO_ID", String.valueOf(elt.getId()));
+                intent.putExtra("CONTACT_INFO_NOM", elt.getNom());
+                intent.putExtra("CONTACT_INFO_NUM", elt.getNumero());
+                startActivity(intent);
             }
         });
         //Lorssqu'on maintient sur un contact
         contactView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                final int item_id = position;
+            public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
                 AlertDialog.Builder delDialog = new AlertDialog.Builder(ContactList.this);
                 delDialog.setIcon(R.drawable.ic_cancel);
                 delDialog.setTitle("Supprimer");
@@ -64,7 +68,18 @@ public class ContactList extends AppCompatActivity {
                 delDialog.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        contactItemList.remove(item_id);
+                        ContactItem elt = (ContactItem) contactView.getItemAtPosition(position);
+                        int id_to_remove = elt.getId();
+                        Integer deletedRow = mydb.delete(String.valueOf(id_to_remove));
+                        if (deletedRow > 0){
+                            Toast.makeText(ContactList.this, "Contact supprimé", Toast.LENGTH_SHORT).show();
+                            Intent contactList = new Intent(getApplicationContext(), ContactList.class);
+                            startActivity(contactList);
+                            finish();
+                        }else {
+                            Toast.makeText(ContactList.this, "Echec supression", Toast.LENGTH_SHORT).show();
+
+                        }
                     }
                 });
                 delDialog.setNegativeButton("Non", null);
@@ -79,9 +94,10 @@ public class ContactList extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 /* on lance la nouvelle activite */
+                Log.d("TEST", "JAPPUIE");
                 Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
                 startActivity(contactActivity);
-
+                finish();
             }
         });
 

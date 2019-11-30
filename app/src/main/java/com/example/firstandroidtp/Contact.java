@@ -1,11 +1,11 @@
 package com.example.firstandroidtp;
 
-public class contact {
+public class Contact {
     private int id;
     private String nom;
     private int numero;
-    public contact(){}
-    public contact(String nom, int numero){
+    public Contact(){}
+    public Contact(String nom, int numero){
         this.nom = nom;
         this.numero = numero;
     }
