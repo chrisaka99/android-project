@@ -38,6 +38,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/buttonBegin"
         android:background="@drawable/border"
         android:textColor="@android:color/white"
         android:padding="12dp"

@@ -28,11 +28,11 @@
     </style>
 
     <style name="buttonMenu">
-        <item name="android:layout_weight">1</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:padding">15sp</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">15sp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

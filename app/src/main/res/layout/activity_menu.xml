@@ -18,44 +18,42 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:text="Menu"
+            android:fontFamily="sans-serif-light"
             android:padding="10sp"
             />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:text="@string/details"
-            android:padding="20sp"
-            />
-
-
-
     </LinearLayout>
     <LinearLayout
         android:id="@+id/options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="20dp"
+        android:layout_weight="1"
+        android:gravity="center"
         >
         <Button
             style="@style/buttonMenu"
-            android:background="@drawable/rect1"
-            android:text="Calculatrice"
-            android:drawableTop="@android:drawable/ic_media_next" />
+            android:background="@drawable/rect4"
+            android:text="Contact"
+            />
         <Button
             style="@style/buttonMenu"
-            android:background="@drawable/rect2"
-            android:text="Calculatrice"
-            android:drawableTop="@android:drawable/ic_media_next" />
+            android:background="@drawable/rect4"
+            android:text="Chronometre"
+            />
         <Button
             style="@style/buttonMenu"
-            android:background="@drawable/rect3"
+            android:background="@drawable/rect4"
             android:text="Calculatrice"
-            android:drawableTop="@android:drawable/ic_media_next" />
-
+            />
+        <Button
+            style="@style/buttonMenu"
+            android:background="@drawable/rect4"
+            android:text="À propos"
+            android:textColor="@android:color/black"
+            />
 
 
 
