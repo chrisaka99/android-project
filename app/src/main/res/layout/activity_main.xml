@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".MainActivity"
+    android:gravity="center">
     <Button
-        android:id="@+id/contactButton"
+        android:id="@+id/chronoButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CONTACTS"
-        android:layout_centerInParent="true"/>
+        android:text="Chrono" />
 
 </RelativeLayout>
