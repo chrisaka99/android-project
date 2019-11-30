@@ -28,6 +28,19 @@ public class ContactList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
 
+        //Bouton + flottant
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /* on lance la nouvelle activite */
+                Log.d("TEST", "JAPPUIE");
+                Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
+                startActivity(contactActivity);
+                finish();
+            }
+        });
+
         mydb = new DatabaseHelper(this);
 
         final List<ContactItem> contactItemList = new ArrayList<>();
@@ -85,19 +98,6 @@ public class ContactList extends AppCompatActivity {
                 delDialog.setNegativeButton("Non", null);
                 delDialog.show();
                 return true;
-            }
-        });
-
-        //Bouton + flottant
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /* on lance la nouvelle activite */
-                Log.d("TEST", "JAPPUIE");
-                Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
-                startActivity(contactActivity);
-                finish();
             }
         });
 
