@@ -41,4 +41,5 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
         startActivity(intent);
     }
+
 }

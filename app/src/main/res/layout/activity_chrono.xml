@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical"
-    tools:context=".Menu">
+    tools:context=".Chrono">
 
     <LinearLayout
         android:id="@+id/describe"
@@ -35,70 +35,21 @@
         android:orientation="horizontal"
         android:padding="20dp">
 
-        <TextView
-            android:id="@+id/heure"
+        <Chronometer
+            android:id="@+id/chrono"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_recent_history"
             android:fontFamily="sans-serif-light"
             android:padding="10sp"
-            android:text="16"
-            android:textSize="50sp" />
+            android:textColor="@android:color/darker_gray"
+            android:textSize="40sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text=":"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/minute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text="25"
-            android:textSize="50sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text=":"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/seconde"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text="12"
-            android:textSize="50sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text=":"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/tiers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-light"
-            android:padding="10sp"
-            android:text="235"
-            android:textSize="20sp" />
 
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/options"
+        android:id="@+id/option"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -111,19 +62,19 @@
             style="@style/buttonMenu"
             android:background="@drawable/rect4"
             android:text="Demarrer"
-            android:onClick="gotoChrono"
+            android:onClick="startChronometer"
             />
         <Button
             style="@style/buttonMenu"
             android:background="@drawable/rect4"
             android:text="Arreter"
-            android:onClick="gotoCalculatrice"
+            android:onClick="pauseChronometer"
             />
         <Button
             style="@style/buttonMenu"
             android:background="@drawable/rect4"
             android:text="Reinitialiser"
-            android:onClick="gotoApropos"
+            android:onClick="resetChronometer"
             />
 
 
