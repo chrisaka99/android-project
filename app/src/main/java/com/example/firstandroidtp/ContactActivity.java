@@ -2,12 +2,11 @@ package com.example.firstandroidtp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.app.ExpandableListActivity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.database.Cursor;
+
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.List;
 
 public class ContactActivity extends AppCompatActivity {
 
@@ -25,22 +21,31 @@ public class ContactActivity extends AppCompatActivity {
     private EditText nom;
     private EditText numero;
     private TextView textView;
+    private TextView message;
     DatabaseHelper mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setEnterTransition(new Fade());
+        }
+
         setContentView(R.layout.activity_contact);
         mydb = new DatabaseHelper(this);
         validerButton = (Button) findViewById(R.id.save);
         nom = (EditText) findViewById(R.id.nom);
         numero = (EditText) findViewById(R.id.numero);
         textView = (TextView) findViewById(R.id.textView);
+        message = (TextView) findViewById(R.id.message);
 
 
         Bundle extras = getIntent().getExtras();
         if(extras != null && !extras.isEmpty()){
             mydb = new DatabaseHelper(this);
             textView.setText("Modifier le contact");
+            message.setText("Modifier");
+            validerButton.setText("Modifier");
+
             final String id_item = getIntent().getStringExtra("CONTACT_INFO_ID");
             final String nom_item = getIntent().getStringExtra("CONTACT_INFO_NOM");
             final String num_item = getIntent().getStringExtra("CONTACT_INFO_NUM");
@@ -81,7 +86,6 @@ public class ContactActivity extends AppCompatActivity {
                     }
                     Intent contactList = new Intent(getApplicationContext(), ContactList.class);
                     startActivity(contactList);
-                    finish();
                 }
             });
         }

@@ -23,6 +23,7 @@
             android:fontFamily="sans-serif-light"
             android:padding="10sp"
             />
+
     </LinearLayout>
     <LinearLayout
         android:id="@+id/options"
@@ -33,6 +34,27 @@
         android:layout_weight="1"
         android:gravity="center"
         >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="50sp"
+            android:text="Bienvenue,"
+
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="10dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:layout_weight="1"
+            android:text="veuillez choisir votre option"
+
+            />
         <Button
             style="@style/buttonMenu"
             android:background="@drawable/rect4"

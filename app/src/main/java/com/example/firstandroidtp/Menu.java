@@ -31,6 +31,7 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),Calculatrice.class);
         startActivity(intent);
     }
+
     //se deplacer vers a propos
     public  void gotoApropos(View v){
         Intent intent = new Intent(getApplicationContext(),Apropos.class);
@@ -45,7 +46,7 @@ public class Menu extends AppCompatActivity {
 
     //se deplacer vers la liste de contact
     public  void gotoContact(View v){
-        Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
+        Intent intent = new Intent(getApplicationContext(),ContactList.class);
         startActivity(intent);
     }
 

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Calcorep App</string>
+    <string name="app_name">AppBox</string>
     <string name="details">
-        Calcorep est une application complete qui regroupe trois applications : \n
+        AppBox est une application complete qui regroupe trois applications : \n
         Un calculatrice \n
         Un chronomètre \n
         Un gestionnaire de contact\n\n

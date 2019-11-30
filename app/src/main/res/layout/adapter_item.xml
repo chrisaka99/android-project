@@ -1,39 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="10dp">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@android:color/white"
+    android:orientation="horizontal">
 
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/circlecontact"
         android:padding="10dp"
-        android:layout_margin="10dp"
-        android:src="@drawable/ic_user"/>
+        android:src="@drawable/ic_user" />
 
     <RelativeLayout
         android:id="@+id/contact_logo"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/nom_contact"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="22dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Chris Aka"
             android:textColor="@android:color/black"
-            android:text="Chris Aka" />
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/num_contact"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="77372660"
-            android:layout_below="@id/nom_contact"/>
+            android:layout_below="@id/nom_contact"
+            android:text="77372660" />
 
     </RelativeLayout>
-
-
 
 </LinearLayout>
