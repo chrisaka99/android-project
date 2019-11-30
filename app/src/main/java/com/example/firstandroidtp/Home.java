@@ -47,9 +47,6 @@ public class Home extends AppCompatActivity {
                     .makeSceneTransitionAnimation(this);
             startActivity(intent, options.toBundle());
 
-            //mettre fin à l'activite
-            finish();
-
         }
 
 

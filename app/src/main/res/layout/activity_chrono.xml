@@ -60,8 +60,9 @@
 
         <Button
             style="@style/buttonMenu"
-            android:background="@drawable/rect4"
+            android:background="@drawable/greenbutton"
             android:text="Demarrer"
+            android:textColor="@android:color/white"
             android:onClick="startChronometer"
             />
         <Button

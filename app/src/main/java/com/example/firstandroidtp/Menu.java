@@ -45,7 +45,7 @@ public class Menu extends AppCompatActivity {
 
     //se deplacer vers la liste de contact
     public  void gotoContact(View v){
-        Intent intent = new Intent(getApplicationContext(),ContactList.class);
+        Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
         startActivity(intent);
     }
 

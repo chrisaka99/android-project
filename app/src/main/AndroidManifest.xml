@@ -12,6 +12,8 @@
         <activity android:name=".Chrono"></activity>
         <activity android:name=".Apropos" />
         <activity android:name=".Menu" />
+        <activity android:name=".ContactList" android:parentActivityName=".Menu"></activity>
+        <activity android:name=".ContactActivity" android:parentActivityName=".ContactList"/>
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,9 +21,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ContactActivity"
-            android:parentActivityName=".ContactList" />
         <activity android:name=".Calculatrice" />
     </application>
 
