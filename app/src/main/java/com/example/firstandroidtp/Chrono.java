@@ -12,13 +12,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Chrono extends AppCompatActivity {
-
-    private Button contactButton;
-
-    private Button validerButton;
-    private EditText nom;
-    private EditText numero;
-    private TextView textView;
     private Chronometer chrono;
     private  boolean running;
     private  long pauseOffset;
@@ -29,6 +22,7 @@ public class Chrono extends AppCompatActivity {
         setContentView(R.layout.activity_chrono);
         chrono=(Chronometer) findViewById(R.id.chrono);
     }
+    //lancer le chrono
     public void startChronometer(View v){
         if(!running){
             chrono.setBase(SystemClock.elapsedRealtime()-pauseOffset);
@@ -36,6 +30,7 @@ public class Chrono extends AppCompatActivity {
             running=true;
         }
     }
+    //stopper le chrono
     public void pauseChronometer(View v){
         if(running){
             chrono.stop();
@@ -43,6 +38,7 @@ public class Chrono extends AppCompatActivity {
             running=false;
         }
     }
+    //reinitialiser le chrono
     public void resetChronometer(View v){
         chrono.setBase(SystemClock.elapsedRealtime());
         pauseOffset=0;

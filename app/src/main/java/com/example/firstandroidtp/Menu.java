@@ -19,26 +19,33 @@ public class Menu extends AppCompatActivity {
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            //definir l'animation d'entre
             getWindow().setEnterTransition(new Fade());
         }
 
 
     }
 
+    //aller à la calculatrice
     public  void gotoCalculatrice(View v){
         Intent intent = new Intent(getApplicationContext(),Calculatrice.class);
         startActivity(intent);
     }
+    //se deplacer vers a propos
     public  void gotoApropos(View v){
         Intent intent = new Intent(getApplicationContext(),Apropos.class);
         startActivity(intent);
     }
+
+    //se deplacer vers a propos
     public  void gotoChrono(View v){
         Intent intent = new Intent(getApplicationContext(),Chrono.class);
         startActivity(intent);
     }
+
+    //se deplacer vers la liste de contact
     public  void gotoContact(View v){
-        Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
+        Intent intent = new Intent(getApplicationContext(),ContactList.class);
         startActivity(intent);
     }
 

@@ -22,6 +22,7 @@ public class Calculatrice extends AppCompatActivity {
         setContentView(R.layout.activity_calculatrice);
 
 
+        //recuperer les deux ecrans
         ecranResultat = (TextView) findViewById(R.id.ecranResultat);
         ecranCalcul = (EditText) findViewById(R.id.ecranCalcul);
 
@@ -29,16 +30,19 @@ public class Calculatrice extends AppCompatActivity {
 
     }
 
+    //entrer un caractere dans la zone de saisie
     public void saisirCalcul(View v){
         ecranCalcul.getText().append(((Button) v).getText());
         calcul();
     }
 
+    //tout supprimer
     public void cleanAll(View v){
         ecranCalcul.getText().clear();
         ecranResultat.setText("");
     }
 
+    //supprimer un caractere
     public  void del(View v) {
         int t = ecranCalcul.getText().length();
         if ( t > 0) {
@@ -47,6 +51,7 @@ public class Calculatrice extends AppCompatActivity {
         }
     }
 
+    //fonction de calcul - return le resultat du calcul
     public void calcul() {
         try {
             Compile calculateur = new Compile();
@@ -57,7 +62,7 @@ public class Calculatrice extends AppCompatActivity {
         }
     }
 
-
+    //sauvegarder le dernier resultat
     public void ans(View v){
         ecranCalcul.getText().append(and);
         calcul();

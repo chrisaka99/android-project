@@ -26,25 +26,29 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //recuperer les vues
         commencer = (Button) findViewById(R.id.buttonBegin);
         logoHome = (ImageView) findViewById(R.id.logoHome);
+
+        //animer le logo
         ObjectAnimator animation = ObjectAnimator.ofFloat(logoHome, "translationY", -60f);
         animation.setDuration(700);
         animation.start();
 
-        ObjectAnimator anima = ObjectAnimator.ofInt(logoHome, "rotate", -60);
-        anima.setDuration(700);
-        anima.start();
 
 
     }
 
+    //se deplacer vers le menu
     public void gotoMenu(View view){
         Intent intent = new Intent(getApplicationContext(), Menu.class);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             ActivityOptions options = ActivityOptions
                     .makeSceneTransitionAnimation(this);
             startActivity(intent, options.toBundle());
+
+            //mettre fin à l'activite
+            finish();
 
         }
 

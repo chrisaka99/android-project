@@ -14,11 +14,11 @@
         android:layout_centerHorizontal="true"
         >
 
-    </ListView>
-    <TextView
-        android:id="@+id/display"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+         <TextView
+             android:id="@+id/display"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />
+     </ListView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
