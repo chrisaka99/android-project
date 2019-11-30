@@ -38,7 +38,6 @@ public class ContactList extends AppCompatActivity {
                 Log.d("TEST", "JAPPUIE");
                 Intent contactActivity = new Intent(getApplicationContext(), ContactActivity.class);
                 startActivity(contactActivity);
-                finish();
             }
         });
 
