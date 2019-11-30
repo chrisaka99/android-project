@@ -34,11 +34,11 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
     public  void gotoChrono(View v){
-        Intent intent = new Intent(getApplicationContext(),Calculatrice.class);
+        Intent intent = new Intent(getApplicationContext(),Chrono.class);
         startActivity(intent);
     }
     public  void gotoContact(View v){
-        Intent intent = new Intent(getApplicationContext(),Calculatrice.class);
+        Intent intent = new Intent(getApplicationContext(),ContactActivity.class);
         startActivity(intent);
     }
 }

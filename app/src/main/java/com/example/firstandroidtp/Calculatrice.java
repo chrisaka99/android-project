@@ -57,10 +57,6 @@ public class Calculatrice extends AppCompatActivity {
         }
     }
 
-    public void themeDark(View view){
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(intent);
-    }
 
     public void ans(View v){
         ecranCalcul.getText().append(and);

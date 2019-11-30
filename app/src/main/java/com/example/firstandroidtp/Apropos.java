@@ -17,15 +17,6 @@ public class Apropos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apropos);
-        setContentView(R.layout.activity_main);
-        contactButton = (Button) findViewById(R.id.contactButton);
-        contactButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /* on lance la nouvelle activite */
-                Intent contactlist = new Intent(getApplicationContext(), ContactList.class);
-                startActivity(contactlist);
-            }
-        });
+
     }
 }

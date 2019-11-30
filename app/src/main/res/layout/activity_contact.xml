@@ -4,56 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactActivity"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center">
+    tools:context=".ContactActivity">
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-    </RelativeLayout>
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
+        android:id="@+id/describe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter un contact"
-        android:textSize="22dp"
-        android:gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/black"
-        />
+        android:orientation="vertical"
 
-    <EditText
-        android:id="@+id/nom"
-        android:layout_width="360dp"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="10sp"
+            android:text="Ajouter contact"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Nom"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/defaultMargin"/>
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/numero"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:hint="Telephone"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/defaultMargin"/>
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName" />
 
-    <Button
-        android:id="@+id/save"
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/defaultMargin"
-        android:text="Valider"/>
+        <EditText
+            android:id="@+id/numero"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:ems="10"
+            android:hint="Telephone"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/save"
+
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:background="@drawable/rect4"
+            android:text="Valider" />
 
 
-
+    </LinearLayout>
 </LinearLayout>
