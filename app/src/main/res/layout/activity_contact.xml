@@ -51,10 +51,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
+            android:fontFamily="sans-serif-light"
             android:textColor="@android:color/darker_gray"
             android:textSize="20sp"
             android:layout_weight="1"
-            android:text="les informations du nouveau contact"
+            android:text="Veuillez renseigner les informations du nouveau contact dans les champs"
 
             />
 

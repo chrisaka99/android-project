@@ -1,12 +1,12 @@
 package com.example.firstandroidtp;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,7 +14,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +26,9 @@ public class ContactList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_list);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setEnterTransition(new Fade());
+        }
         //Bouton + flottant
         ImageButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -69,15 +71,30 @@ public class ContactList extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //Lorssqu'on maintient sur un contact
+        //Lorssqu'on maintient un contact
         contactView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
-                AlertDialog.Builder delDialog = new AlertDialog.Builder(ContactList.this);
+                /*AlertDialog.Builder delDialog = new AlertDialog.Builder(ContactList.this);
                 delDialog.setIcon(R.drawable.ic_cancel);
                 delDialog.setTitle("Supprimer");
                 delDialog.setMessage("Voulez vous supprimer ce contact ?");
-                delDialog.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
+
+
+                 */
+                ContactItem elt = (ContactItem) contactView.getItemAtPosition(position);
+                int id_to_remove = elt.getId();
+                Integer deletedRow = mydb.delete(String.valueOf(id_to_remove));
+                if (deletedRow > 0){
+                    Toast.makeText(ContactList.this, "Contact supprimé", Toast.LENGTH_SHORT).show();
+                    Intent contactList = new Intent(getApplicationContext(), ContactList.class);
+                    startActivity(contactList);
+                    finish();
+                }else {
+                    Toast.makeText(ContactList.this, "Echec supression", Toast.LENGTH_SHORT).show();
+                }
+
+                /*delDialog.setPositiveButton("OUI", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         ContactItem elt = (ContactItem) contactView.getItemAtPosition(position);
@@ -90,12 +107,13 @@ public class ContactList extends AppCompatActivity {
                             finish();
                         }else {
                             Toast.makeText(ContactList.this, "Echec supression", Toast.LENGTH_SHORT).show();
-
                         }
                     }
                 });
-                delDialog.setNegativeButton("Non", null);
-                delDialog.show();
+                delDialog.setNegativeButton("NON", null);
+                //delDialog.show();
+
+                 */
                 return true;
             }
         });

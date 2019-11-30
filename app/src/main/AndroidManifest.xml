@@ -13,7 +13,7 @@
         <activity android:name=".Apropos" />
         <activity android:name=".Menu" />
         <activity android:name=".ContactList" android:parentActivityName=".Menu" />
-        <activity android:name=".ContactActivity" android:parentActivityName=".ContactList"/>
+        <activity android:name=".ContactActivity" android:parentActivityName=".Menu"/>
         <activity android:name=".Home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

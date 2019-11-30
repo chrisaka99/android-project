@@ -6,9 +6,10 @@ import android.content.Intent;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.transition.Fade;
+import android.transition.Slide;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,13 +23,21 @@ public class ContactActivity extends AppCompatActivity {
     private EditText numero;
     private TextView textView;
     private TextView message;
+    private TextView mes;
     DatabaseHelper mydb;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setEnterTransition(new Fade());
+            getWindow().setEnterTransition(new Slide());
         }
+
+
 
         setContentView(R.layout.activity_contact);
         mydb = new DatabaseHelper(this);
@@ -36,6 +45,7 @@ public class ContactActivity extends AppCompatActivity {
         nom = (EditText) findViewById(R.id.nom);
         numero = (EditText) findViewById(R.id.numero);
         textView = (TextView) findViewById(R.id.textView);
+        mes = (TextView) findViewById(R.id.mes);
         message = (TextView) findViewById(R.id.message);
 
 
@@ -44,6 +54,7 @@ public class ContactActivity extends AppCompatActivity {
             mydb = new DatabaseHelper(this);
             textView.setText("Modifier le contact");
             message.setText("Modifier");
+            mes.setText("Veuillez remplacer les champs que vous voulez changer");
             validerButton.setText("Modifier");
 
             final String id_item = getIntent().getStringExtra("CONTACT_INFO_ID");
@@ -86,6 +97,7 @@ public class ContactActivity extends AppCompatActivity {
                     }
                     Intent contactList = new Intent(getApplicationContext(), ContactList.class);
                     startActivity(contactList);
+                    finish();
                 }
             });
         }
